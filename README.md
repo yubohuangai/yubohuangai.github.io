@@ -1,6 +1,6 @@
-# charlton
+# yubohuangai.github.io
 
-Personal academic homepage for **Yubo Huang** — https://yubohuangai.github.io/charlton/
+Personal academic homepage for **Yubo Huang** — https://yubohuangai.github.io/
 
 Built with Jekyll on top of the [minimal-light](https://github.com/yaoyao-liu/minimal-light) theme.
 
