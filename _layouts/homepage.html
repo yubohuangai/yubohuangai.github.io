@@ -96,6 +96,11 @@
       </header>
       <section>
 
+      <nav class="topnav">
+        <a href="/"{% if page.url == "/" %} class="active"{% endif %}>Home</a>
+        <a href="/motion-capture.html"{% if page.url contains "motion-capture" %} class="active"{% endif %}>Motion Capture &amp; 3D Reconstruction</a>
+      </nav>
+
       {{ content }}
 
       <br>

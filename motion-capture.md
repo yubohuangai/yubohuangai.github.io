@@ -10,8 +10,6 @@ layout: homepage
 .mc-specs { font-size: 0.95rem; color: #333; margin: 0.4rem 0 1.4rem; }
 </style>
 
-<p style="margin-bottom:1rem;"><a href="/">&larr; Home</a></p>
-
 ## Motion Capture and 3D Reconstruction <span style="color:#e74d3c; font-weight:600; font-size:0.66em; white-space:nowrap;">[ Looking for collaborators! ]</span>
 
 I work on the motion-capture side of 3D vision: building a system that records the 3D motion of articulated subjects, people, animals, and sometimes objects, to produce the ground-truth data that downstream 3D models are trained and evaluated against. This data is scarce and expensive to obtain, and high-fidelity 3D annotation matters more here than algorithmic novelty. To keep the annotations trustworthy enough to serve as ground truth, the pipeline avoids learning-based shortcuts. The long-term aim is model-free reconstruction of arbitrary subjects.
@@ -20,11 +18,11 @@ I work on the motion-capture side of 3D vision: building a system that records t
 
 <p class="mc-specs"><b>Eleven Google Pixel 7 phones · 4K · 30 fps · under 17 ms inter-camera sync</b></p>
 
-### Demo 1: Dairy-cow reconstruction (model-free)
+### Demo 1: Cattle reconstruction (model-free)
 
 <figure class="mc-demo">
   <video src="./assets/videos/cow-reconstruction.mp4" autoplay loop muted playsinline controls preload="metadata"></video>
-  <figcaption><b>Arbitrary-object reconstruction</b> on a moving Holstein cow in the barn. Left: a raw camera view from the rig. Right: the reconstructed 3D point cloud with the recovered camera poses, orbiting around the cow. Pipeline for the object track: SAM 3 foreground masks, COLMAP structure-from-motion, then ACMMP dense multi-view stereo. No body model, no learned priors.</figcaption>
+  <figcaption><b>Arbitrary-object reconstruction</b> on a moving Holstein heifer in the barn. Left: a raw camera view from the rig. Right: the reconstructed 3D point cloud with the recovered camera poses, orbiting around it. Pipeline for the object track: SAM 3 foreground masks, COLMAP structure-from-motion, then ACMMP dense multi-view stereo. No body model, no learned priors.</figcaption>
 </figure>
 
 ### Demo 2: Human pose estimation

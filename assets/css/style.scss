@@ -3,3 +3,43 @@
 
 @import "minimal-light";
 @import "publications";
+
+/* Top navigation row (entrance links) — structure after Yaoyao Liu's top row,
+   recoloured to the site palette (navy text, #e74d3c accent underline). */
+.topnav {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 1.1em;
+  margin: 0 0 1.6em;
+  padding-bottom: 0.55em;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 0.95rem;
+}
+.topnav a {
+  position: relative;
+  color: #043361;
+  font-weight: 500;
+  text-decoration: none;
+  padding-bottom: 3px;
+}
+.topnav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: #e74d3c;
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+.topnav a:hover { color: #043361; }
+.topnav a:hover::after,
+.topnav a.active::after { transform: scaleX(1); }
+.topnav a.active { color: #e74d3c; }
+@media (prefers-color-scheme: dark) {
+  .topnav { border-bottom-color: #3a3b45; }
+  .topnav a,
+  .topnav a:hover { color: rgb(62, 183, 240); }
+}
