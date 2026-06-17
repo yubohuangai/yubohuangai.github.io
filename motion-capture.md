@@ -6,7 +6,6 @@ layout: homepage
 .mc-demo { margin: 1.5rem 0 2rem; }
 .mc-demo video { width: 100%; height: auto; display: block; }
 .mc-demo figcaption { font-size: 0.85rem; margin-top: 0.55rem; line-height: 1.5; }
-.mc-specs { font-size: 0.95rem; margin: 0.4rem 0 1.4rem; }
 </style>
 
 ## Motion Capture and 3D Reconstruction <span style="color:#e74d3c; font-weight:600; font-size:0.66em; white-space:nowrap;">[ Looking for collaborators! ]</span>
@@ -17,30 +16,32 @@ As a technology nerd, I love trading ideas with curious people and sharing the e
 
 Reach me at <a href="mailto:yubo16@ualberta.ca">yubo16@ualberta.ca</a>.
 
-I work on the motion-capture side of 3D vision: building a system that records the 3D motion of articulated subjects, people, animals, and sometimes objects, to produce the ground-truth data that downstream 3D models are trained and evaluated against. This data is scarce and expensive to obtain, and high-fidelity 3D annotation matters more here than algorithmic novelty. To keep the annotations trustworthy enough to serve as ground truth, the pipeline avoids learning-based shortcuts. The long-term aim is model-free reconstruction of arbitrary subjects.
+### Background
 
-**How can high-fidelity motion capture leave the studio?** Our answer is a fully mobile, markerless rig of eleven commodity smartphones, deployable in the wild: outdoors, in barns, and in unprepared indoor spaces. It runs in three stages: per-frame inter-camera synchronization, multi-view camera calibration, then application-specific reconstruction.
+Motion capture records the 3D motion of articulated subjects, people, animals, and sometimes objects, producing the ground-truth data that downstream 3D models are trained and evaluated against. The field is data-bound: high-fidelity 3D annotation matters more than algorithmic novelty, yet such data is scarce and expensive to obtain. To keep annotations trustworthy enough to serve as ground truth, the pipeline avoids learning-based shortcuts. The long-term aim is model-free reconstruction of arbitrary subjects.
 
-<p class="mc-specs"><b>Eleven Google Pixel 7 phones · 4K · 30 fps · under 17 ms inter-camera sync</b></p>
+### System
+
+How can high-fidelity motion capture leave the studio? The answer here is a fully mobile, markerless rig of eleven Google Pixel 7 smartphones, recording at 4K and 30 fps and synchronized to under 17 ms between cameras, deployable in the wild: outdoors, in barns, and in unprepared indoor spaces. From raw video to reconstruction, it runs in three stages:
+
+- Synchronization: software-only, with no hardware trigger; under 17 ms offset across the eleven-phone rig. Capture runs through Argus, the in-house Android app for the rig.
+- Calibration: a moving chessboard, Zhang intrinsics, PnP extrinsics, then COLMAP bundle adjustment, reaching about 1 px reprojection error, roughly 2 mm in metric terms.
+- Reconstruction: for human bodies, MMPose 2D keypoints, triangulation, and SMPL fitting; for arbitrary objects, SAM 3 masks, COLMAP structure-from-motion, and ACMMP dense multi-view stereo.
 
 ### Demo 1: Cattle reconstruction (model-free)
 
 <figure class="mc-demo">
   <video src="./assets/videos/cow-reconstruction.mp4" autoplay loop muted playsinline controls preload="metadata"></video>
-  <figcaption><b>Arbitrary-object reconstruction</b> on a moving Holstein heifer in the barn. Left: a raw camera view from the rig. Right: the reconstructed 3D point cloud with the recovered camera poses, orbiting around it. Pipeline for the object track: SAM 3 foreground masks, COLMAP structure-from-motion, then ACMMP dense multi-view stereo. No body model, no learned priors.</figcaption>
+  <figcaption>Arbitrary-object reconstruction on a moving Holstein heifer in the barn. Left, a raw camera view from the rig; right, the reconstructed point cloud with the recovered camera poses, orbiting around it. The object track uses no body model and no learned priors: SAM 3 foreground masks, COLMAP structure-from-motion, then ACMMP dense multi-view stereo.</figcaption>
 </figure>
 
-### Demo 2: Human pose estimation
+### Demo 2: Human pose estimation (parametric)
 
 <figure class="mc-demo">
-  <video src="./assets/videos/human-pose-smplx.mp4" autoplay loop muted playsinline controls preload="metadata"></video>
-  <figcaption><b>SMPL-X fitting</b> for the human-pose track. Multi-view 2D keypoints (MMPose) are triangulated across the eleven views, then refined by SMPL-X fitting with silhouette supervision. SMPL-X is a parametric fallback, used here only because no model-free alternative exists yet for human bodies.</figcaption>
+  <video src="./assets/videos/human-pose-smpl.mp4" autoplay loop muted playsinline controls preload="metadata"></video>
+  <figcaption>Human pose estimation by SMPL fitting. Multi-view 2D keypoints from MMPose are triangulated across the eleven views, then refined by SMPL fitting with silhouette supervision. SMPL is a parametric body model, a fallback used only because no model-free alternative exists yet for human bodies.</figcaption>
 </figure>
 
-### The system in brief
+### Resources
 
-- **Synchronization:** software-only, no hardware trigger; under 17 ms offset across the eleven-phone rig. Capture runs through Argus, our Android app for the rig.
-- **Calibration:** a moving chessboard, Zhang intrinsics, PnP extrinsics, then COLMAP bundle adjustment. About 1 px reprojection error, roughly 2 mm in metric terms.
-- **Reconstruction:** human pose (MMPose, triangulation, SMPL-X fitting) or arbitrary objects (SAM 3 masks, COLMAP SfM, ACMMP dense MVS).
-
-A two-page visual summary, with the full pipeline and references, is here: [Motion Capture and 3D Reconstruction work summary (PDF)](https://github.com/yubohuangai/Motion-Capture/blob/master/share/Motion_Capture_and_3D_Reconstruction_Work_Summary.pdf). Code lives in [Motion-Capture](https://github.com/yubohuangai/Motion-Capture) (calibration, reconstruction, pose) and [Argus](https://github.com/yubohuangai/Argus) (synchronization).
+A two-page visual summary, with the full pipeline and references, is available as a [PDF work summary](https://github.com/yubohuangai/Motion-Capture/blob/master/share/Motion_Capture_and_3D_Reconstruction_Work_Summary.pdf). The code lives in [Motion-Capture](https://github.com/yubohuangai/Motion-Capture), covering calibration, reconstruction, and pose, and in [Argus](https://github.com/yubohuangai/Argus) for synchronization.
