@@ -5,7 +5,8 @@ main:
     conference_short: ICME
     conference: The IEEE Conference on Multimedia and Expo <strong>(ICME)</strong>, 2023.
     pdf: https://arxiv.org/abs/2407.00261
-    code: https://github.com/yubohuangai/Generative-Iris-Prior-Embedded-Transformer-for-Iris-Restoration
+    # code link hidden while the GitHub account is suspended (repo not mirrored to GitLab); restore on reinstatement.
+    # code: https://github.com/yubohuangai/Generative-Iris-Prior-Embedded-Transformer-for-Iris-Restoration
     notes: Oral Presentation
     image: ./assets/img/gformer.png
     
