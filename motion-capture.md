@@ -44,4 +44,4 @@ How can high-fidelity motion capture leave the studio? The answer here is a full
 
 ### Resources
 
-A two-page visual summary, with the full pipeline and references, is available as a [PDF work summary](https://github.com/yubohuangai/Motion-Capture/blob/master/share/Motion_Capture_and_3D_Reconstruction_Work_Summary.pdf). The code lives in [Motion-Capture](https://github.com/yubohuangai/Motion-Capture), covering calibration, reconstruction, and pose, and in [Argus](https://github.com/yubohuangai/Argus) for synchronization.
+A two-page visual summary, with the full pipeline and references, is available as a [PDF work summary](/assets/files/Motion_Capture_and_3D_Reconstruction_Work_Summary.pdf). The code lives in [Motion-Capture](https://gitlab.com/huangyubo/Motion-Capture), covering calibration, reconstruction, and pose, with a companion app, Argus, handling synchronization.

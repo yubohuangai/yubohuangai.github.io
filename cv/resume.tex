@@ -5,6 +5,17 @@
 % optionally suppress printing the page number
 \pagenumbering{gobble}
 
+% GitLab social macro (mirrors chicv's \github with the fontawesome5 GitLab icon).
+% In use while the GitHub account is suspended; repos are mirrored to GitLab.
+\NewDocumentCommand{\gitlab}{ m o }{
+    \faGitlab\IfNoValueTF{#2}{
+        \underline{\href{#1}{#1}}
+    }{
+        \underline{\href{#2}{#1}}
+    }
+    \hspace{-20pt}
+}
+
 \begin{document}
 
 %% basic personal info
@@ -12,8 +23,8 @@
 
 \begin{basicinfo}
   \info{\email{yubo.huang@hotmail.com}}
-  \info{\homepage{home}[https://yubohuangai.github.io/]}
-  \info{\github{yubohuangai}[https://github.com/yubohuangai]}
+  \info{\homepage{home}[https://huangyubo.gitlab.io/]}
+  \info{\gitlab{huangyubo}[https://gitlab.com/huangyubo]}
   \info{\linkedinsquare{LinkedIn}[https://www.linkedin.com/in/yubo-huang-716530296]}
 %  \info{\phone{+1 (236) 268-7977}}
 
@@ -71,8 +82,8 @@
   {Nov 2023 -- Present}
   [Research Volunteer, advised by \href{https://diaoenmao.com/}{\underline{Dr. Enmao Diao}}][Remote]
   \begin{itemize}
-    \item \href{https://github.com/yubohuangai/Pixel-Pair-Encoding}{\underline{Pixel-Pair-Encoding}} Adapts byte pair encoding from natural language processing to image modality.
-    \item \href{https://github.com/yubohuangai/Neural-Data-Compression-with-Byte-Pair-Encoding}{\underline{Neural-Data-Compression-with-Byte-Pair-Encoding}} Integrates byte pair encoding into neural data compression.
+    \item \href{https://gitlab.com/huangyubo/Pixel-Pair-Encoding}{\underline{Pixel-Pair-Encoding}} Adapts byte pair encoding from natural language processing to image modality.
+    \item \href{https://gitlab.com/huangyubo/Neural-Data-Compression-with-Byte-Pair-Encoding}{\underline{Neural-Data-Compression-with-Byte-Pair-Encoding}} Integrates byte pair encoding into neural data compression.
     \item Neural-Data-Compression-Pipeline Constructs a pipeline incorporating major neural data compression models for large-scale experiments.
   \end{itemize}
 
