@@ -19,6 +19,30 @@ I am Yubo Huang. I was born in Xinzhou, Shanxi, China, in 1998. I received my B.
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
   <tr>
     <td colspan="2" style="padding:2.5%;vertical-align:middle">
+      <h2>Projects</h2>
+    </td>
+  </tr>
+  <tr class="proj-row">
+    <td class="proj-img" style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+      <a href="/motion-capture.html"><img src="./assets/img/motion-capture.jpg" alt="Motion Capture and 3D Reconstruction" class="project-image" /></a>
+    </td>
+    <td class="proj-text" style="padding:2.5%;width:75%;vertical-align:middle">
+      <h3><a href="/motion-capture.html">Motion Capture and 3D Reconstruction</a></h3>
+      <p class="project-meta">
+      A fully mobile, markerless motion-capture rig of eleven synchronized smartphones for high-fidelity 3D reconstruction in the wild, with cattle reconstruction, human pose, and IMU motion-capture demos.
+      </p>
+      <p class="linkblock">
+        <a href="/motion-capture.html">project page</a> /
+        <a href="/assets/files/Motion_Capture_and_3D_Reconstruction_Work_Summary.pdf" target="_blank" rel="noopener">work summary</a> /
+        <a href="https://gitlab.com/huangyubo/Motion-Capture" target="_blank" rel="noopener">code</a>
+      </p>
+    </td>
+  </tr>
+</table>
+
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <tr>
+    <td colspan="2" style="padding:2.5%;vertical-align:middle">
       <h2>Publications</h2>
     </td>
   </tr>
