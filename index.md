@@ -13,7 +13,7 @@ I am Yubo Huang. I was born in Xinzhou, Shanxi, China, in 1998. I received my B.
 </p>
 
 <p>
-<strong style="color:#e74d3c; font-weight:600">I am actively looking for a Ph.D. position in computer vision and artificial intelligence in Canada. Please feel free to contact me if you are interested.</strong>
+<strong style="color:#f09228; font-weight:600">I am actively looking for a Ph.D. position in computer vision and artificial intelligence in Canada. Please feel free to contact me if you are interested.</strong>
 </p>
 
     </td>
@@ -69,7 +69,7 @@ I am Yubo Huang. I was born in Xinzhou, Shanxi, China, in 1998. I received my B.
         {% if link.code %} / <a href="{{ link.code }}" target="_blank" rel="noopener">Code</a>{% endif %}
         {% if link.page %} / <a href="{{ link.page }}" target="_blank" rel="noopener">Project Page</a>{% endif %}
         {% if link.bibtex %} / <a href="{{ link.bibtex }}" target="_blank" rel="noopener">BibTeX</a>{% endif %}
-        {% if link.notes %} <strong><i style="color:#e74d3c">{{ link.notes }}</i></strong>{% endif %}
+        {% if link.notes %} <strong><i style="color:#f09228">{{ link.notes }}</i></strong>{% endif %}
       </p>
     </td>
   </tr>
