@@ -18,7 +18,7 @@ I am Yubo Huang. I was born in Xinzhou, Shanxi, China, in 1998. I received my B.
 
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
   <tr>
-    <td style="padding:2.5%;width:100%;vertical-align:middle">
+    <td colspan="2" style="padding:2.5%;vertical-align:middle">
       <h2>Publications</h2>
     </td>
   </tr>
