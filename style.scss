@@ -98,11 +98,6 @@ h1 {
   margin: 10px 0 0;
 }
 
-// Email links: clickable but rendered in the body text colour, not link blue.
-.email-link,
-.email-link:hover {
-  color: inherit;
-}
 
 // Top navigation.
 .topnav {
@@ -123,7 +118,7 @@ span.highlight {
 .project-image {
   width: 160px;
   height: 160px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 6px;
 }
 
