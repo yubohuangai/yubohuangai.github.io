@@ -60,9 +60,6 @@
                 {% if site.email %}
                 <a class="email-link" href="mailto:{{ site.email }}">Email</a>
                 {% endif %}
-                {% if site.google_scholar %}
-                &nbsp;/&nbsp; <a href="{{ site.google_scholar }}" target="_blank" rel="noopener">Google Scholar</a>
-                {% endif %}
                 {% if site.cv_link %}
                 &nbsp;/&nbsp; <a href="{{ site.cv_link }}" target="_blank" rel="noopener">CV</a>
                 {% endif %}
@@ -78,11 +75,17 @@
                 {% if site.twitter %}
                 &nbsp;/&nbsp; <a href="{{ site.twitter }}" target="_blank" rel="noopener">Twitter</a>
                 {% endif %}
+                {% if site.instagram %}
+                &nbsp;/&nbsp; <a href="{{ site.instagram }}" target="_blank" rel="noopener">Instagram</a>
+                {% endif %}
+                {% if site.google_scholar %}
+                &nbsp;/&nbsp; <a href="{{ site.google_scholar }}" target="_blank" rel="noopener">Google Scholar</a>
+                {% endif %}
               </p>
             </td>
             <td class="header-photo" style="padding:2.5%;width:37%;max-width:37%">
               {% if site.avatar %}
-              <img style="width:100%;max-width:100%;border-radius:50%;" alt="profile photo" src="{{ site.avatar }}">
+              <img style="width:100%;max-width:100%;border-radius:0;" alt="profile photo" src="{{ site.avatar }}">
               {% endif %}
             </td>
           </tr>
