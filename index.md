@@ -67,7 +67,6 @@ I am Yubo Huang. I was born in Xinzhou, Shanxi, China, in 1998. I received my B.
         <em>{{ link.conference }}</em>
       </p>
       <p class="linkblock">
-        {% if link.pdf %}<a href="{{ link.pdf }}" target="_blank" rel="noopener">PDF</a>{% endif %}
         {% if link.code %} / <a href="{{ link.code }}" target="_blank" rel="noopener">Code</a>{% endif %}
         {% if link.page %} / <a href="{{ link.page }}" target="_blank" rel="noopener">Project Page</a>{% endif %}
         {% if link.bibtex %} / <a href="{{ link.bibtex }}" target="_blank" rel="noopener">BibTeX</a>{% endif %}
