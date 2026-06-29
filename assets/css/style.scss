@@ -5,7 +5,7 @@
 @import "publications";
 
 /* Top navigation row (entrance links) — structure after Yaoyao Liu's top row,
-   recoloured to the site palette (navy text, #e74d3c accent underline). */
+   recoloured to the site palette (navy text, #f09228 accent underline). */
 .topnav {
   display: flex;
   justify-content: flex-end;
@@ -18,7 +18,7 @@
 }
 .topnav a {
   position: relative;
-  color: #043361;
+  color: #1772d0;
   font-weight: 500;
   text-decoration: none;
   padding-bottom: 3px;
@@ -30,19 +30,14 @@
   right: 0;
   bottom: 0;
   height: 2px;
-  background: #e74d3c;
+  background: #f09228;
   transform: scaleX(0);
   transition: transform 0.2s ease;
 }
-.topnav a:hover { color: #043361; }
+.topnav a:hover { color: #1772d0; }
 .topnav a:hover::after,
 .topnav a.active::after { transform: scaleX(1); }
-.topnav a.active { color: #e74d3c; }
-@media (prefers-color-scheme: dark) {
-  .topnav { border-bottom-color: #3a3b45; }
-  .topnav a,
-  .topnav a:hover { color: rgb(62, 183, 240); }
-}
+.topnav a.active { color: #f09228; }
 
 /* Email links: clickable but rendered in the default text colour (not link
    blue), inheriting so they adapt in both light and dark mode. */
