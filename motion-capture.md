@@ -22,18 +22,6 @@ As a technology nerd, I love trading ideas with curious people and sharing the e
 
 Reach me at <a class="email-link" href="mailto:yubo16@ualberta.ca">yubo16@ualberta.ca</a>.
 
-### Background
-
-Motion capture records the 3D motion of articulated subjects, people, animals, and sometimes objects, producing the ground-truth data that downstream 3D models are trained and evaluated against. The field is data-bound: high-fidelity 3D annotation matters more than algorithmic novelty, yet such data is scarce and expensive to obtain. To keep annotations trustworthy enough to serve as ground truth, the pipeline avoids learning-based shortcuts. The long-term aim is model-free reconstruction of arbitrary subjects.
-
-### System
-
-How can high-fidelity motion capture leave the studio? The answer here is a fully mobile, markerless rig of eleven Google Pixel 7 smartphones, recording at 4K and 30 fps and synchronized to under 17 ms between cameras, deployable in the wild: outdoors, in barns, and in unprepared indoor spaces. From raw video to reconstruction, it runs in three stages:
-
-- Synchronization: software-only, with no hardware trigger; under 17 ms offset across the eleven-phone rig. Capture runs through Argus, the in-house Android app for the rig.
-- Calibration: a moving chessboard, Zhang intrinsics, PnP extrinsics, then COLMAP bundle adjustment, reaching about 1 px reprojection error, roughly 2 mm in metric terms.
-- Reconstruction: for human bodies, MMPose 2D keypoints, triangulation, and SMPL fitting; for arbitrary objects, SAM 3 masks, COLMAP structure-from-motion, and ACMMP dense multi-view stereo.
-
 ### Demo 1: Cattle reconstruction (model-free)
 
 <figure class="mc-demo">
@@ -54,6 +42,18 @@ How can high-fidelity motion capture leave the studio? The answer here is a full
   <video src="./assets/videos/imu-mocap.mp4" autoplay loop muted playsinline controls preload="metadata"></video>
   <figcaption>A reproduction of <a href="https://github.com/Xinyu-Yi/GlobalPose">GlobalPose</a> (Yi et al., SIGGRAPH 2025), which recovers full-body motion from six body-worn IMUs with physics-based global motion estimation. Left, the subject wearing the inertial sensors; right, the reconstructed body, shown here at its T-pose calibration. This is a different modality from the camera rig above, a wearable inertial setup rather than multi-view video, included to show breadth; the method and code are the original authors', not mine.</figcaption>
 </figure>
+
+### Background
+
+Motion capture records the 3D motion of articulated subjects, people, animals, and sometimes objects, producing the ground-truth data that downstream 3D models are trained and evaluated against. The field is data-bound: high-fidelity 3D annotation matters more than algorithmic novelty, yet such data is scarce and expensive to obtain. To keep annotations trustworthy enough to serve as ground truth, the pipeline avoids learning-based shortcuts. The long-term aim is model-free reconstruction of arbitrary subjects.
+
+### System
+
+How can high-fidelity motion capture leave the studio? The answer here is a fully mobile, markerless rig of eleven Google Pixel 7 smartphones, recording at 4K and 30 fps and synchronized to under 17 ms between cameras, deployable in the wild: outdoors, in barns, and in unprepared indoor spaces. From raw video to reconstruction, it runs in three stages:
+
+- Synchronization: software-only, with no hardware trigger; under 17 ms offset across the eleven-phone rig. Capture runs through Argus, the in-house Android app for the rig.
+- Calibration: a moving chessboard, Zhang intrinsics, PnP extrinsics, then COLMAP bundle adjustment, reaching about 1 px reprojection error, roughly 2 mm in metric terms.
+- Reconstruction: for human bodies, MMPose 2D keypoints, triangulation, and SMPL fitting; for arbitrary objects, SAM 3 masks, COLMAP structure-from-motion, and ACMMP dense multi-view stereo.
 
 ### Resources
 
