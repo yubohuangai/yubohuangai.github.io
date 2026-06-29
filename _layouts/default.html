@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<!--
+  Site design / layout / CSS adapted from Jon Barron's website
+  (https://jonbarron.info, "feel free to steal this website's source code"),
+  via Leonid Keselman's Jekyll fork (https://github.com/leonidk/leonidk.github.io,
+  "feel free to use template for your own purposes"), itself built on
+  Jekyll Now by Barry Clark (https://github.com/barryclark/jekyll-now).
+  Only the design shell is reused here; all content is Yubo Huang's own.
+-->
+<html lang="{{ site.lang | default: "en-US" }}">
+
+<head>
+  <title>{{ site.name }}{% if page.url != "/" and page.title %} | {{ page.title }}{% endif %}</title>
+
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <meta name="author" content="{{ site.name }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if site.description %}
+  <meta name="description" content="{{ site.description }}">
+  {% endif %}
+  {% if site.keywords %}
+  <meta name="keywords" content="{{ site.keywords }}">
+  {% endif %}
+
+  {% if site.canonical %}
+  <link rel="canonical" href="{{ site.canonical }}">
+  {% else %}
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  {% endif %}
+
+  {% if site.favicon %}
+  <link rel="icon" href="{{ site.favicon }}?v=3" type="image/png" />
+  {% endif %}
+
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tr style="padding:0px">
+      <td style="padding:0px">
+
+        <!-- Header: name + photo + links row -->
+        <table class="header-table" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr style="padding:0px">
+            <td class="header-text" style="padding:2.5%;width:63%;vertical-align:middle">
+              <h1>
+                {{ site.name }}
+                {% if site.title_zh %}
+                <span class="name-zh">{{ site.title_zh }}</span>
+                {% endif %}
+              </h1>
+              <p class="header-subtitle" style="text-align:center;">
+                {% if site.position %}{{ site.position }}{% endif %}
+                {% if site.position and site.affiliation %}<br>{% endif %}
+                {% if site.affiliation %}<a href="{{ site.affiliation_url }}" target="_blank" rel="noopener">{{ site.affiliation }}</a>{% endif %}
+              </p>
+              <p class="header-links" style="text-align:center;">
+                {% if site.email %}
+                <a class="email-link" href="mailto:{{ site.email }}">Email</a>
+                {% endif %}
+                {% if site.google_scholar %}
+                &nbsp;/&nbsp; <a href="{{ site.google_scholar }}" target="_blank" rel="noopener">Google Scholar</a>
+                {% endif %}
+                {% if site.cv_link %}
+                &nbsp;/&nbsp; <a href="{{ site.cv_link }}" target="_blank" rel="noopener">CV</a>
+                {% endif %}
+                {% if site.github_link %}
+                &nbsp;/&nbsp; <a href="{{ site.github_link }}" target="_blank" rel="noopener">GitHub</a>
+                {% endif %}
+                {% if site.gitlab_link %}
+                &nbsp;/&nbsp; <a href="{{ site.gitlab_link }}" target="_blank" rel="noopener">GitLab</a>
+                {% endif %}
+                {% if site.linkedin %}
+                &nbsp;/&nbsp; <a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+                {% endif %}
+                {% if site.twitter %}
+                &nbsp;/&nbsp; <a href="{{ site.twitter }}" target="_blank" rel="noopener">Twitter</a>
+                {% endif %}
+              </p>
+            </td>
+            <td class="header-photo" style="padding:2.5%;width:37%;max-width:37%">
+              {% if site.avatar %}
+              <img style="width:100%;max-width:100%;border-radius:50%;" alt="profile photo" src="{{ site.avatar }}">
+              {% endif %}
+            </td>
+          </tr>
+        </table>
+
+        <!-- Navigation -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:0 2.5%;width:100%">
+              <p class="topnav" style="text-align:center;">
+                <a href="/"{% if page.url == "/" %} class="active"{% endif %}>Home</a>
+                &nbsp;/&nbsp;
+                <a href="/motion-capture.html"{% if page.url contains "motion-capture" %} class="active"{% endif %}>Motion Capture &amp; 3D Reconstruction</a>
+              </p>
+            </td>
+          </tr>
+        </table>
+
+        <!-- Page content -->
+        {{ content }}
+
+        <!-- Footer / attribution -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:0px">
+              <br>
+              <p style="text-align:center;font-size:small;">
+                Design from <a style="font-size:small;" href="https://jonbarron.info" target="_blank" rel="noopener">Jon Barron's website</a>,
+                via <a style="font-size:small;" href="https://github.com/leonidk/leonidk.github.io" target="_blank" rel="noopener">Leonid Keselman's Jekyll fork</a>,
+                built on <a style="font-size:small;" href="https://github.com/barryclark/jekyll-now" target="_blank" rel="noopener">Jekyll Now</a>.
+              </p>
+            </td>
+          </tr>
+        </table>
+
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>

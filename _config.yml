@@ -1,4 +1,7 @@
-# Basic Information 
+# Basic Information
+# `name` is what the Jon Barron / Leonid Keselman template prints in the header
+# and <title>. `title` is kept for backward compatibility / SEO.
+name: Yubo Huang
 title: Yubo Huang
 title_zh: 黄昱博
 position: Research Intern
@@ -12,11 +15,13 @@ keywords: Yubo Huang
 description: Yubo Huang
 canonical: https://huangyubo.gitlab.io/
 
-# Links 
+# Site URL (used for canonical fallback / sitemap).
+url: "https://huangyubo.gitlab.io"
+
+# Links
 # If you don't need one of them, you may delete the corresponding line.
 cv_link: assets/files/resume.pdf
-# github_link hidden while the GitHub account is suspended; restore when reinstated.
-# github_link: https://github.com/yubohuangai
+github_link: https://github.com/yuboshell
 gitlab_link: https://gitlab.com/huangyubo
 linkedin: https://www.linkedin.com/in/yubo-huang-716530296
 google_scholar: https://scholar.google.ca/citations?user=qYREfhAAAAAJ&hl=en&authuser=2
@@ -26,18 +31,15 @@ google_scholar: https://scholar.google.ca/citations?user=qYREfhAAAAAJ&hl=en&auth
 avatar: ./assets/img/avatar.png
 favicon: ./assets/img/favicon.png
 
-# Footnote ("Powered by Jekyll and Minimal Light theme.")
-enable_footnote: true
-
-# Font: "Serif" or "Sans Serif"
-font: "Serif"
-
-# Google Analytics ID
-# google_analytics: UA-111540567-4
+# Sass: compile style.scss; compressed output (matches the upstream template).
+sass:
+  style: compressed
 
 # Files removed from the generated website.
+# LICENSE is kept in the repo (template attribution) but excluded from the build output.
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
   - LICENSE
+  - LICENSE-template

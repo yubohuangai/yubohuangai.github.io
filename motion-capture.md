@@ -1,12 +1,18 @@
 ---
-layout: homepage
+layout: default
+title: Motion Capture & 3D Reconstruction
 ---
 
 <style>
+.mc-body { padding: 0 2.5%; }
+.mc-body h2 { margin-top: 1.2rem; }
+.mc-body h3 { display: block; margin: 1.4rem 0 0.4rem; }
 .mc-demo { margin: 1.5rem 0 2rem; }
 .mc-demo video { width: 100%; height: auto; display: block; }
 .mc-demo figcaption { font-size: 0.85rem; margin-top: 0.55rem; line-height: 1.5; }
 </style>
+
+<div class="mc-body" markdown="1">
 
 ## Motion Capture and 3D Reconstruction <span style="color:#e74d3c; font-weight:600; font-size:0.66em; white-space:nowrap;">[ Looking for collaborators! ]</span>
 
@@ -52,3 +58,5 @@ How can high-fidelity motion capture leave the studio? The answer here is a full
 ### Resources
 
 A two-page visual summary, with the full pipeline and references, is available as a [PDF work summary](/assets/files/Motion_Capture_and_3D_Reconstruction_Work_Summary.pdf). The code lives in [Motion-Capture](https://gitlab.com/huangyubo/Motion-Capture), covering calibration, reconstruction, and pose, with a companion app, Argus, handling synchronization.
+
+</div>

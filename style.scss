@@ -1,0 +1,279 @@
+---
+---
+
+//
+// Jon Barron-style base rules (via Leonid Keselman's fork).
+// White background, Lato font, blue (#1772d0) links, clean centered single
+// column. Responsive @media breakpoints added below (the original fork had
+// none) so the layout reflows on phones and tablets.
+//
+
+/**************/
+/* BASE RULES */
+/**************/
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+
+a {
+  color: #1772d0;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: #f09228;
+  text-decoration: none;
+}
+
+body,
+td,
+th,
+tr,
+p,
+a {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  font-display: auto;
+}
+
+strong {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  font-display: auto;
+}
+
+p {
+  line-height: 1.5;
+}
+
+h2 {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 22px;
+  font-display: auto;
+  font-weight: normal;
+  padding: 0px;
+  margin: 0px;
+}
+
+h3 {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  font-display: auto;
+  padding: 0px;
+  margin: 0px;
+}
+
+h1 {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+  font-display: auto;
+  text-align: center;
+  padding: 0px;
+  margin-block-start: 14px;
+  margin-block-end: 14px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+// Chinese name subtitle inside the H1.
+.name-zh {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.6em;
+  color: #555;
+}
+
+.header-subtitle {
+  font-size: 15px;
+  margin: 6px 0;
+}
+
+.header-links {
+  margin: 10px 0 0;
+}
+
+// Email links: clickable but rendered in the body text colour, not link blue.
+.email-link,
+.email-link:hover {
+  color: inherit;
+}
+
+// Top navigation.
+.topnav {
+  margin: 0.4em 0 1.2em;
+  font-size: 15px;
+}
+
+.topnav a.active {
+  color: #f09228;
+  font-weight: 700;
+}
+
+span.highlight {
+  background-color: #ffffd0;
+}
+
+// Research / project rows on the homepage.
+.project-image {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+.project-meta {
+  margin: 4px 0;
+}
+
+.linkblock {
+  margin-top: 6px;
+}
+
+/********************/
+/* RESPONSIVE RULES */
+/********************/
+//
+// The upstream fork ships a `width=device-width` viewport but ZERO media
+// queries, so its fixed two-column table never reflows on small screens.
+// These breakpoints stack the header (text above photo), shrink the photo,
+// scale type/padding down, and force every <img> to fit its container so
+// nothing overflows horizontally.
+
+// Tablet / large phone: stack the header into one centered column.
+@media screen and (max-width: 720px) {
+  body,
+  td,
+  th,
+  tr,
+  p,
+  a,
+  strong {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  // Collapse the header's two cells (text | photo) into a single column.
+  // The row becomes a flex column so `order` can lift the photo above the
+  // text (plain `display:block` cells ignore `order`).
+  .header-table,
+  .header-table tbody {
+    display: block;
+    width: 100% !important;
+  }
+
+  .header-table tr {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+  }
+
+  .header-table td {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1.5% 4% !important;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  // Photo above the text, centered and size-capped so it never dominates.
+  .header-photo {
+    order: -1;
+  }
+
+  .header-photo img {
+    width: 190px !important;
+    max-width: 60% !important;
+    margin: 0 auto 8px;
+    display: block;
+  }
+
+  // Keep general content tables single-column and padded sensibly.
+  table {
+    width: 100% !important;
+  }
+
+  td {
+    padding: 2.5% 4% !important;
+  }
+
+  // Any image (project teasers, figures) fits the column width.
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  // Research / publication rows: stack the teaser above the text instead of
+  // squeezing both into a narrow two-column split.
+  .proj-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .proj-row .proj-img,
+  .proj-row .proj-text {
+    display: block;
+    width: 100% !important;
+    text-align: center;
+  }
+
+  .proj-row .proj-img img {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .proj-row .proj-text {
+    text-align: left;
+  }
+}
+
+// Small phone: tighter type and padding, smaller photo.
+@media screen and (max-width: 480px) {
+  body,
+  td,
+  th,
+  tr,
+  p,
+  a,
+  strong {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  .header-photo img {
+    width: 150px !important;
+    max-width: 55% !important;
+  }
+
+  td {
+    padding: 3% 5% !important;
+  }
+
+  .topnav {
+    font-size: 14px;
+  }
+}
