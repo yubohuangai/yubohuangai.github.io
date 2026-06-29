@@ -14,7 +14,7 @@ title: Motion Capture & 3D Reconstruction
 
 <div class="mc-body" markdown="1">
 
-## Motion Capture and 3D Reconstruction <span style="color:#f09228; font-weight:600; font-size:0.66em; white-space:nowrap;">[ Looking for collaborators! ]</span>
+## Motion Capture and 3D Reconstruction <span style="font-weight:600; font-size:0.66em; white-space:nowrap;">[ Looking for collaborators! ]</span>
 
 ### Work with me
 

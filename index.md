@@ -13,33 +13,9 @@ I am Yubo Huang. I was born in Xinzhou, Shanxi, China, in 1998. I received my B.
 </p>
 
 <p>
-<strong style="color:#f09228; font-weight:600">I am actively looking for a Ph.D. position in computer vision and artificial intelligence in Canada. Please feel free to contact me if you are interested.</strong>
+<strong style="font-weight:600">I am actively looking for a Ph.D. position in computer vision and artificial intelligence in Canada. Please feel free to contact me if you are interested.</strong>
 </p>
 
-    </td>
-  </tr>
-</table>
-
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tr>
-    <td style="padding:2.5%;width:100%;vertical-align:middle">
-      <h2>Research</h2>
-    </td>
-  </tr>
-  <tr class="proj-row">
-    <td class="proj-img" style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-      <a href="/motion-capture.html"><img src="./assets/img/gformer.png" alt="Motion Capture and 3D Reconstruction" class="project-image" /></a>
-    </td>
-    <td class="proj-text" style="padding:2.5%;width:75%;vertical-align:middle">
-      <h3><a href="/motion-capture.html">Motion Capture and 3D Reconstruction</a></h3>
-      <p class="project-meta">
-      A fully mobile, markerless motion-capture rig of eleven synchronized smartphones for high-fidelity 3D reconstruction in the wild, with cattle reconstruction, human pose, and IMU motion-capture demos.
-      </p>
-      <p class="linkblock">
-        <a href="/motion-capture.html">project page</a> /
-        <a href="/assets/files/Motion_Capture_and_3D_Reconstruction_Work_Summary.pdf" target="_blank" rel="noopener">work summary</a> /
-        <a href="https://gitlab.com/huangyubo/Motion-Capture" target="_blank" rel="noopener">code</a>
-      </p>
     </td>
   </tr>
 </table>
@@ -69,7 +45,7 @@ I am Yubo Huang. I was born in Xinzhou, Shanxi, China, in 1998. I received my B.
         {% if link.code %} / <a href="{{ link.code }}" target="_blank" rel="noopener">Code</a>{% endif %}
         {% if link.page %} / <a href="{{ link.page }}" target="_blank" rel="noopener">Project Page</a>{% endif %}
         {% if link.bibtex %} / <a href="{{ link.bibtex }}" target="_blank" rel="noopener">BibTeX</a>{% endif %}
-        {% if link.notes %} <strong><i style="color:#f09228">{{ link.notes }}</i></strong>{% endif %}
+        {% if link.notes %} <strong><i>{{ link.notes }}</i></strong>{% endif %}
       </p>
     </td>
   </tr>

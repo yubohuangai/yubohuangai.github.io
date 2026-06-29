@@ -111,7 +111,7 @@ h1 {
 }
 
 .topnav a.active {
-  color: #f09228;
+  color: #000;
   font-weight: 700;
 }
 
@@ -121,9 +121,9 @@ span.highlight {
 
 // Research / project rows on the homepage.
 .project-image {
-  width: auto;
+  max-width: 160px;
+  max-height: 160px;
   height: auto;
-  max-width: 100%;
   border-radius: 6px;
 }
 
