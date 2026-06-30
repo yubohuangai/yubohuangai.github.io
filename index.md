@@ -77,3 +77,19 @@ I am Yubo Huang. I was born in Xinzhou, Shanxi, China, in 1998. I received my B.
   {% endfor %}
 
 </table>
+
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <tr>
+    <td colspan="2" style="padding:1% 2.5%;vertical-align:middle">
+      <h2>Blogs</h2>
+    </td>
+  </tr>
+  <tr class="proj-row">
+    <td colspan="2" class="proj-text" style="padding:1% 2.5%;vertical-align:middle">
+      <h3><a href="https://huangyubo.gitlab.io/agent-native-lab/" target="_blank" rel="noopener">The Lab Management Workflow Revolution</a></h3>
+      <p class="project-meta">
+      How a research lab can become agent-native, starting from one agent that already works: the friction in a typical lab workflow, and a first implemented step, a Lab Inventory Agent. <em>June 2026.</em>
+      </p>
+    </td>
+  </tr>
+</table>
