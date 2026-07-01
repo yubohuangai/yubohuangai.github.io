@@ -20,6 +20,11 @@ title: Motion Capture & 3D Reconstruction
 
 As a technology nerd, I love trading ideas with curious people and sharing the engineering skills and thinking I have picked up along the way. I am happy to mentor you hands-on until you are up to speed. If this project interests you, or you would simply like to collaborate, please do not hesitate to get in touch.
 
+**Two open directions for collaborators:**
+
+1. **Breaking the 11-device cap.** The rig tops out at eleven phones because an Android hotspot accepts only ten clients around a single host. An external access point — a Raspberry Pi acting as a router — might lift that ceiling and let the rig grow. Inspired by [this build](https://www.youtube.com/watch?v=jlHWnKVpygw&t=414s).
+2. **New synchronization algorithms.** [Argus](https://github.com/yuboshell/Argus), the rig's capture app, builds on Google's [libsoftwaresync](https://github.com/google-research/libsoftwaresync) from 2019. Six years on, with agentic coding reshaping how software gets written, it is worth exploring new algorithms that push the sub-17 ms offset lower.
+
 Reach me at <a class="email-link" href="mailto:yubo16@ualberta.ca">yubo16@ualberta.ca</a>.
 
 ### Demo 1: Cattle reconstruction (model-free)
