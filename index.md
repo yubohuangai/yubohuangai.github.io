@@ -81,6 +81,10 @@ I am Yubo Huang. I was born in Xinzhou, Shanxi, China, in 1998. I received my B.
 <details style="padding:1% 2.5%;">
   <summary style="cursor:pointer;"><h2 style="display:inline; margin:0;">Blogs</h2></summary>
   <div style="margin-top:0.7rem;">
+    <h3><a href="/graph-tokenization.html">Study Note: Graph Tokenization</a></h3>
+    <p class="project-meta">
+    Reading notes on <em>Graph Tokenization for Bridging Graphs and Transformers</em> (Guo et al., ICLR 2026): why graphs never got a tokenizer, and how serializing a graph reversibly and deterministically lets a plain Transformer read it. <em>June 2026.</em>
+    </p>
     <h3><a href="https://huangyubo.gitlab.io/agent-native-lab/" target="_blank" rel="noopener">The Lab Management Workflow Revolution</a></h3>
     <p class="project-meta">
     How a research lab can become agent-native, starting from one agent that already works: the friction in a typical lab workflow, and a first implemented step, a Lab Inventory Agent. <em>June 2026.</em>

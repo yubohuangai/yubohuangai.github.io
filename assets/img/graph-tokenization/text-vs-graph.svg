@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 560" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a2" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#1a1a1a"/>
+    </marker>
+  </defs>
+  <rect width="1500" height="560" fill="#ffffff"/>
+
+  <!-- divider -->
+  <line x1="750" y1="40" x2="750" y2="520" stroke="#cccccc" stroke-width="2"/>
+
+  <!-- LEFT: text = path graph -->
+  <text x="360" y="70" text-anchor="middle" font-size="34" fill="#1a1a1a" font-weight="700">Text: a path graph</text>
+  <text x="360" y="108" text-anchor="middle" font-size="25" fill="#1a1a1a">linear order, one fixed neighbourhood</text>
+
+  <g font-size="28" fill="#1a1a1a" text-anchor="middle">
+    <rect x="70"  y="250" width="120" height="70" fill="#f2f2f2" stroke="#1a1a1a" stroke-width="3"/><text x="130" y="293">The</text>
+    <rect x="300" y="250" width="120" height="70" fill="#f2f2f2" stroke="#1a1a1a" stroke-width="3"/><text x="360" y="293">cat</text>
+    <rect x="530" y="250" width="120" height="70" fill="#f2f2f2" stroke="#1a1a1a" stroke-width="3"/><text x="590" y="293">sat</text>
+  </g>
+  <g stroke="#1a1a1a" stroke-width="3">
+    <line x1="190" y1="285" x2="296" y2="285" marker-end="url(#a2)"/>
+    <line x1="420" y1="285" x2="526" y2="285" marker-end="url(#a2)"/>
+  </g>
+  <text x="360" y="430" text-anchor="middle" font-size="25" fill="#1a1a1a">canonical ordering → tokenization is trivial</text>
+
+  <!-- RIGHT: general graph branches -->
+  <text x="1130" y="70" text-anchor="middle" font-size="34" fill="#1a1a1a" font-weight="700">Graph: branches</text>
+  <text x="1130" y="108" text-anchor="middle" font-size="25" fill="#1a1a1a">no canonical order, permutation-invariant</text>
+
+  <g stroke="#1a1a1a" stroke-width="3">
+    <line x1="1130" y1="210" x2="980"  y2="300"/>
+    <line x1="1130" y1="210" x2="1280" y2="300"/>
+    <line x1="980"  y1="300" x2="1010" y2="410"/>
+    <line x1="980"  y1="300" x2="1130" y2="360"/>
+    <line x1="1280" y1="300" x2="1250" y2="410"/>
+    <line x1="1130" y1="360" x2="1250" y2="410"/>
+  </g>
+  <g font-size="28" fill="#1a1a1a" text-anchor="middle">
+    <circle cx="1130" cy="210" r="30" fill="#f2f2f2" stroke="#1a1a1a" stroke-width="3"/><text x="1130" y="220">C</text>
+    <circle cx="980"  cy="300" r="30" fill="#f2f2f2" stroke="#1a1a1a" stroke-width="3"/><text x="980"  y="310">O</text>
+    <circle cx="1280" cy="300" r="30" fill="#f2f2f2" stroke="#1a1a1a" stroke-width="3"/><text x="1280" y="310">N</text>
+    <circle cx="1010" cy="410" r="30" fill="#f2f2f2" stroke="#1a1a1a" stroke-width="3"/><text x="1010" y="420">C</text>
+    <circle cx="1130" cy="360" r="30" fill="#f2f2f2" stroke="#1a1a1a" stroke-width="3"/><text x="1130" y="370">C</text>
+    <circle cx="1250" cy="410" r="30" fill="#f2f2f2" stroke="#1a1a1a" stroke-width="3"/><text x="1250" y="420">O</text>
+  </g>
+  <text x="1130" y="490" text-anchor="middle" font-size="25" fill="#1a1a1a">n-gram stats over contiguous tokens do not apply</text>
+</svg>

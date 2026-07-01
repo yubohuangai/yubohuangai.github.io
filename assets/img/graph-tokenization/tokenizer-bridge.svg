@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 520" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="tb" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#1a1a1a"/>
+    </marker>
+    <marker id="tbg" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#9a9a9a"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="520" fill="#ffffff"/>
+
+  <!-- modalities that crossed -->
+  <rect x="50" y="58" width="250" height="244" fill="#ffffff" stroke="#1a1a1a" stroke-width="2.5"/>
+  <g font-size="30" fill="#1a1a1a" text-anchor="middle">
+    <text x="175" y="130">Text</text>
+    <text x="175" y="195">Image</text>
+    <text x="175" y="260">Audio</text>
+  </g>
+
+  <!-- tokenizer arrow -->
+  <line x1="305" y1="180" x2="475" y2="180" stroke="#1a1a1a" stroke-width="3" marker-end="url(#tb)"/>
+  <text x="390" y="160" text-anchor="middle" font-size="23" fill="#1a1a1a" font-weight="600">tokenizer</text>
+
+  <!-- tokens -->
+  <g fill="#f2f2f2" stroke="#1a1a1a" stroke-width="2.5">
+    <rect x="492" y="150" width="58" height="58"/>
+    <rect x="558" y="150" width="58" height="58"/>
+    <rect x="624" y="150" width="58" height="58"/>
+  </g>
+  <text x="587" y="240" text-anchor="middle" font-size="22" fill="#1a1a1a">tokens</text>
+
+  <!-- arrow into transformer -->
+  <line x1="700" y1="180" x2="912" y2="180" stroke="#1a1a1a" stroke-width="3" marker-end="url(#tb)"/>
+
+  <!-- transformer -->
+  <rect x="930" y="78" width="320" height="204" fill="#ffffff" stroke="#1a1a1a" stroke-width="2.5"/>
+  <text x="1090" y="170" text-anchor="middle" font-size="34" fill="#1a1a1a" font-weight="700">Transformer</text>
+  <text x="1090" y="208" text-anchor="middle" font-size="24" fill="#1a1a1a">BERT / GPT</text>
+
+  <!-- graph: blocked -->
+  <rect x="50" y="372" width="250" height="110" fill="#ffffff" stroke="#1a1a1a" stroke-width="2.5"/>
+  <g stroke="#1a1a1a" stroke-width="2.5">
+    <line x1="108" y1="427" x2="150" y2="405"/>
+    <line x1="150" y1="405" x2="150" y2="452"/>
+    <line x1="108" y1="427" x2="150" y2="452"/>
+  </g>
+  <g fill="#f2f2f2" stroke="#1a1a1a" stroke-width="2.5">
+    <circle cx="108" cy="427" r="12"/><circle cx="150" cy="405" r="12"/><circle cx="150" cy="452" r="12"/>
+  </g>
+  <text x="225" y="436" text-anchor="middle" font-size="30" fill="#1a1a1a">Graph</text>
+
+  <!-- dashed blocked path + cross -->
+  <line x1="305" y1="427" x2="455" y2="427" stroke="#9a9a9a" stroke-width="3" stroke-dasharray="9 7" marker-end="url(#tbg)"/>
+  <g stroke="#1a1a1a" stroke-width="5">
+    <line x1="486" y1="408" x2="524" y2="446"/>
+    <line x1="524" y1="408" x2="486" y2="446"/>
+  </g>
+  <text x="690" y="436" text-anchor="middle" font-size="26" fill="#1a1a1a" font-weight="600">no tokenizer yet</text>
+</svg>

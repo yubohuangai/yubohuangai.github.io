@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1380 378" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="bm" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#1a1a1a"/>
+    </marker>
+  </defs>
+  <rect width="1380" height="378" fill="#ffffff"/>
+
+  <!-- Row 1: a a b d a a b a c, two "a a" pairs highlighted -->
+  <g font-size="30" fill="#1a1a1a" text-anchor="middle">
+    <g fill="#f7f7f7" stroke="#1a1a1a" stroke-width="2.5">
+      <rect x="60" y="40" width="48" height="48"/><rect x="112" y="40" width="48" height="48"/>
+      <rect x="164" y="40" width="48" height="48"/><rect x="216" y="40" width="48" height="48"/>
+      <rect x="268" y="40" width="48" height="48"/><rect x="320" y="40" width="48" height="48"/>
+      <rect x="372" y="40" width="48" height="48"/><rect x="424" y="40" width="48" height="48"/>
+      <rect x="476" y="40" width="48" height="48"/>
+    </g>
+    <text x="84" y="74">a</text><text x="136" y="74">a</text><text x="188" y="74">b</text><text x="240" y="74">d</text>
+    <text x="292" y="74">a</text><text x="344" y="74">a</text><text x="396" y="74">b</text><text x="448" y="74">a</text><text x="500" y="74">c</text>
+  </g>
+  <rect x="55" y="35" width="110" height="58" fill="none" stroke="#1a1a1a" stroke-width="4"/>
+  <rect x="263" y="35" width="110" height="58" fill="none" stroke="#1a1a1a" stroke-width="4"/>
+  <text x="720" y="70" font-size="26" fill="#1a1a1a">most frequent pair <tspan font-weight="700">a a</tspan> becomes a new token <tspan font-weight="700">X</tspan></text>
+
+  <line x1="280" y1="100" x2="280" y2="150" stroke="#1a1a1a" stroke-width="3" marker-end="url(#bm)"/>
+  <text x="300" y="133" font-size="22" fill="#1a1a1a">merge</text>
+
+  <!-- Row 2: X b d X b a c, two "X b" pairs highlighted; X tiles shaded as merged tokens -->
+  <g font-size="30" fill="#1a1a1a" text-anchor="middle">
+    <g stroke="#1a1a1a" stroke-width="2.5">
+      <rect x="60" y="170" width="48" height="48" fill="#e0e0e0"/><rect x="112" y="170" width="48" height="48" fill="#f7f7f7"/>
+      <rect x="164" y="170" width="48" height="48" fill="#f7f7f7"/><rect x="216" y="170" width="48" height="48" fill="#e0e0e0"/>
+      <rect x="268" y="170" width="48" height="48" fill="#f7f7f7"/><rect x="320" y="170" width="48" height="48" fill="#f7f7f7"/>
+      <rect x="372" y="170" width="48" height="48" fill="#f7f7f7"/>
+    </g>
+    <text x="84" y="204">X</text><text x="136" y="204">b</text><text x="188" y="204">d</text><text x="240" y="204">X</text>
+    <text x="292" y="204">b</text><text x="344" y="204">a</text><text x="396" y="204">c</text>
+  </g>
+  <rect x="55" y="165" width="110" height="58" fill="none" stroke="#1a1a1a" stroke-width="4"/>
+  <rect x="211" y="165" width="110" height="58" fill="none" stroke="#1a1a1a" stroke-width="4"/>
+  <text x="720" y="200" font-size="26" fill="#1a1a1a">now the most frequent pair <tspan font-weight="700">X b</tspan> becomes <tspan font-weight="700">Y</tspan></text>
+
+  <line x1="280" y1="230" x2="280" y2="280" stroke="#1a1a1a" stroke-width="3" marker-end="url(#bm)"/>
+  <text x="300" y="263" font-size="22" fill="#1a1a1a">merge</text>
+
+  <!-- Row 3: Y d Y a c -->
+  <g font-size="30" fill="#1a1a1a" text-anchor="middle">
+    <g stroke="#1a1a1a" stroke-width="2.5">
+      <rect x="60" y="300" width="48" height="48" fill="#e0e0e0"/><rect x="112" y="300" width="48" height="48" fill="#f7f7f7"/>
+      <rect x="164" y="300" width="48" height="48" fill="#e0e0e0"/><rect x="216" y="300" width="48" height="48" fill="#f7f7f7"/>
+      <rect x="268" y="300" width="48" height="48" fill="#f7f7f7"/>
+    </g>
+    <text x="84" y="334">Y</text><text x="136" y="334">d</text><text x="188" y="334">Y</text><text x="240" y="334">a</text><text x="292" y="334">c</text>
+  </g>
+  <text x="430" y="330" font-size="26" fill="#1a1a1a">the sequence shrinks; <tspan font-weight="700">X</tspan>, <tspan font-weight="700">Y</tspan> are the learned tokens</text>
+</svg>
