@@ -95,6 +95,16 @@ h1 {
   margin: 10px 0 0;
 }
 
+// Bio-forward header: left-align name, bio, and links on desktop.
+.header-text h1 { text-align: left; }
+.header-bio {
+  font-size: 15.5px;
+  line-height: 1.6;
+  margin: 12px 0;
+  text-align: left;
+}
+.header-text .header-links { text-align: left; }
+
 
 // Top navigation.
 .topnav {
@@ -179,6 +189,11 @@ span.highlight {
     text-align: center;
     box-sizing: border-box;
   }
+
+  // Keep the stacked header centered on mobile (overrides the desktop left-align).
+  .header-text h1,
+  .header-bio,
+  .header-text .header-links { text-align: center; }
 
   // Photo above the text, centered and size-capped so it never dominates.
   .header-photo {

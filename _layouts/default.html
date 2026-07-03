@@ -52,12 +52,8 @@
                 <span class="name-zh">{{ site.title_zh }}</span>
                 {% endif %}
               </h1>
-              <p class="header-subtitle" style="text-align:center;">
-                {% if site.position %}{{ site.position }}{% endif %}
-                {% if site.position and site.affiliation %}<br>{% endif %}
-                {% if site.affiliation %}<a href="{{ site.affiliation_url }}" target="_blank" rel="noopener">{{ site.affiliation }}</a>{% endif %}
-              </p>
-              <p class="header-links" style="text-align:center;">
+              <p class="header-bio">{{ site.bio }}</p>
+              <p class="header-links">
                 {% if site.email %}
                 <a class="email-link" href="mailto:{{ site.email }}">Email</a>
                 {% endif %}

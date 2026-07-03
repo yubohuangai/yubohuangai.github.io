@@ -7,6 +7,9 @@ title_zh: 黄昱博
 position: Research Intern and PhD applicant
 affiliation: University of Alberta
 affiliation_url: https://www.ualberta.ca/
+
+# Header bio (HTML allowed) — rendered as the intro paragraph in the site header.
+bio: 'I am Yubo Huang, a Research Intern and PhD applicant at the <a href="https://www.ualberta.ca/" target="_blank" rel="noopener">University of Alberta</a>. I was born in Xinzhou, Shanxi, China, in 1998, and received my B.S. (2020) and M.Eng. (2023) degrees from <a href="https://english.bupt.edu.cn/About_BUPT/About_BUPT.htm" target="_blank" rel="noopener">Beijing University of Posts and Telecommunications</a>.'
 email: yubo.huang@hotmail.com
 
 # Search Engine Optimization (SEO)
