@@ -159,7 +159,6 @@ span.highlight {
 .project-image {
   width: 160px;
   height: auto;
-  border-radius: 6px;
 }
 
 // Projects & Publications: each row's preview image is exactly as tall as its text
@@ -186,7 +185,6 @@ span.highlight {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  border-radius: 6px;
 }
 .projects .proj-thumb a,
 .pubs .proj-thumb a { position: absolute; inset: 0; }
