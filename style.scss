@@ -201,8 +201,8 @@ span.highlight {
 }
 // Square project thumbnails fill via cover (square sources, no crop).
 .projects .proj-thumb img { object-fit: cover; }
-// Publications keep the full wide architecture figure: wider column + contain.
-.pubs .proj-img { flex-basis: 200px; }
+// Publications: same 108px column as Projects (equal widths). The wide figure is
+// kept whole via contain, so it sits letterboxed (smaller) inside the square box.
 .pubs .proj-thumb img { object-fit: contain; }
 
 .project-meta {
