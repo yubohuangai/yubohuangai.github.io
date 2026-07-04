@@ -8,7 +8,7 @@ main:
     # code link hidden while the GitHub account is suspended (repo not mirrored to GitLab); restore on reinstatement.
     # code: https://github.com/yubohuangai/Generative-Iris-Prior-Embedded-Transformer-for-Iris-Restoration
     notes: Oral Presentation
-    image: ./assets/img/gformer.png
+    image: ./assets/img/gformer-thumb.jpg
     
   # Hidden temporarily — restore by uncommenting.
   # - title: Prior-guided Blind Iris Image Restoration Algorithm 先验引导的虹膜图像盲修复算法

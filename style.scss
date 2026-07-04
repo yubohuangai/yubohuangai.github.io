@@ -196,14 +196,10 @@ span.highlight {
   inset: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
   display: block;
   border-radius: 0;
 }
-// Square-ish project thumbnails fill via cover (square sources, no real crop).
-.projects .proj-thumb img { object-fit: cover; }
-// Wide paper figures: a wider column + contain so the whole figure shows, height-matched.
-.pubs .proj-img { flex-basis: 200px; }
-.pubs .proj-thumb img { object-fit: contain; }
 
 .project-meta {
   margin: 4px 0;
