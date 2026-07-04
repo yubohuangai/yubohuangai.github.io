@@ -3,17 +3,17 @@ layout: default
 title: Home
 ---
 
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+<table class="projects" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
   <tr>
     <td colspan="2" style="padding:1% 2.5%;vertical-align:middle">
       <h2>Projects</h2>
     </td>
   </tr>
   <tr class="proj-row">
-    <td class="proj-img" style="padding:1% 2.5%;width:25%;vertical-align:middle;min-width:120px">
-      <a href="/motion-capture.html"><img src="./assets/img/motion-capture.jpg" alt="Motion Capture and 3D Reconstruction" class="project-image" /></a>
+    <td class="proj-img" style="padding:1% 2.5%;vertical-align:top">
+      <div class="proj-thumb"><a href="/motion-capture.html"><img src="./assets/img/motion-capture.jpg" alt="Motion Capture and 3D Reconstruction" class="project-image" /></a></div>
     </td>
-    <td class="proj-text" style="padding:1% 2.5%;width:75%;vertical-align:middle">
+    <td class="proj-text" style="padding:1% 2.5%;vertical-align:top">
       <h3><a href="/motion-capture.html">Motion Capture and 3D Reconstruction</a></h3>
       <p class="project-meta">
       A fully mobile, markerless motion-capture rig of eleven synchronized smartphones for high-fidelity 3D reconstruction in the wild, with cattle reconstruction, human pose, and IMU motion-capture demos.
@@ -21,10 +21,10 @@ title: Home
     </td>
   </tr>
   <tr class="proj-row">
-    <td class="proj-img" style="padding:1% 2.5%;width:25%;vertical-align:middle;min-width:120px">
-      <a href="https://yuboshell.github.io/led-sync-panel/report.html" target="_blank" rel="noopener"><img src="./assets/img/led-timecode.jpg" alt="LED Timecode Panel" class="project-image" /></a>
+    <td class="proj-img" style="padding:1% 2.5%;vertical-align:top">
+      <div class="proj-thumb"><a href="https://yuboshell.github.io/led-sync-panel/report.html" target="_blank" rel="noopener"><img src="./assets/img/led-timecode.jpg" alt="LED Timecode Panel" class="project-image" /></a></div>
     </td>
-    <td class="proj-text" style="padding:1% 2.5%;width:75%;vertical-align:middle">
+    <td class="proj-text" style="padding:1% 2.5%;vertical-align:top">
       <h3><a href="https://yuboshell.github.io/led-sync-panel/report.html" target="_blank" rel="noopener">LED Timecode Panel</a></h3>
       <p class="project-meta">
       A DIY LED timecode panel that stamps a per-frame binary code into every camera's view, for measuring multi-camera synchronization to sub-millisecond precision (the capture rig behind the Pixel-7 sync-evaluation project).
