@@ -162,39 +162,48 @@ span.highlight {
   border-radius: 6px;
 }
 
-// Projects: make each row's preview image exactly as tall as its text block.
-// Flex row; the text sets the height. The image column is a fixed-width frame that
-// stretches to that height, and the image fills it (object-fit:cover). The frame is
-// near-square, so cover crops only a hair — absorbed by the images' margins.
-.projects .proj-row {
+// Projects & Publications: each row's preview image is exactly as tall as its text
+// block. Flex row; the text sets the height, and the image column is a fixed-width
+// frame stretched to that height with the image filling it.
+.projects .proj-row,
+.pubs .proj-row {
   display: flex;
   align-items: stretch;
 }
-.projects .proj-img {
+.projects .proj-img,
+.pubs .proj-img {
   flex: 0 0 108px;
   align-self: stretch;
 }
-.projects .proj-text {
+.projects .proj-text,
+.pubs .proj-text {
   flex: 1 1 auto;
   min-width: 0;
 }
-.projects .proj-thumb {
+.projects .proj-thumb,
+.pubs .proj-thumb {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
   border-radius: 6px;
 }
-.projects .proj-thumb a { position: absolute; inset: 0; }
-.projects .proj-thumb img {
+.projects .proj-thumb a,
+.pubs .proj-thumb a { position: absolute; inset: 0; }
+.projects .proj-thumb img,
+.pubs .proj-thumb img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 0;
   display: block;
+  border-radius: 0;
 }
+// Square-ish project thumbnails fill via cover (square sources, no real crop).
+.projects .proj-thumb img { object-fit: cover; }
+// Wide paper figures: a wider column + contain so the whole figure shows, height-matched.
+.pubs .proj-img { flex-basis: 200px; }
+.pubs .proj-thumb img { object-fit: contain; }
 
 .project-meta {
   margin: 4px 0;
@@ -321,14 +330,17 @@ span.highlight {
     margin: 0 auto;
   }
 
-  // Undo the desktop square-frame so the stacked mobile thumbnail is natural.
-  .projects .proj-thumb {
+  // Undo the desktop frame so the stacked mobile thumbnail is natural.
+  .projects .proj-thumb,
+  .pubs .proj-thumb {
     position: static;
     height: auto;
-    aspect-ratio: auto;
+    overflow: visible;
   }
-  .projects .proj-thumb a { position: static; }
-  .projects .proj-thumb img {
+  .projects .proj-thumb a,
+  .pubs .proj-thumb a { position: static; }
+  .projects .proj-thumb img,
+  .pubs .proj-thumb img {
     position: static;
     width: auto;
     height: auto;

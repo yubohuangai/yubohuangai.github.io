@@ -33,7 +33,7 @@ title: Home
   </tr>
 </table>
 
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+<table class="pubs" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
   <tr>
     <td colspan="2" style="padding:1% 2.5%;vertical-align:middle">
       <h2>Publications</h2>
@@ -42,12 +42,12 @@ title: Home
 
   {% for link in site.data.publications.main %}
   <tr class="proj-row">
-    <td class="proj-img" style="padding:1% 2.5%;width:25%;vertical-align:middle;min-width:120px">
+    <td class="proj-img" style="padding:1% 2.5%;vertical-align:top">
       {% if link.image %}
-      <img src="{{ link.image }}" alt="{{ link.title }}" class="project-image" />
+      <div class="proj-thumb"><img src="{{ link.image }}" alt="{{ link.title }}" class="project-image" /></div>
       {% endif %}
     </td>
-    <td class="proj-text" style="padding:1% 2.5%;width:75%;vertical-align:middle">
+    <td class="proj-text" style="padding:1% 2.5%;vertical-align:top">
       <h3>{% if link.pdf %}<a href="{{ link.pdf }}" target="_blank" rel="noopener">{{ link.title }}</a>{% else %}{{ link.title }}{% endif %}</h3>
       <p class="project-meta">
         {{ link.authors }}<br>
