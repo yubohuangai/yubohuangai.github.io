@@ -58,6 +58,11 @@
     \RenewDocumentCommand{\headrulewidth}{}{0pt}
     \rfoot{\color{black!60}Updated \monthyear}
 }
+% Footer must span the FULL text width: \rfoot right-aligns to \headwidth, which
+% fancyhdr froze from the class's default margins — so when a document overrides
+% \geometry (narrower margins) the stamp floats ~43pt short of the right margin.
+% Re-sync at begin-document, once \textwidth is final.
+\AtBeginDocument{\setlength{\headwidth}{\textwidth}}
 
 % Spacings
 \setlength{\footskip}{4pt}

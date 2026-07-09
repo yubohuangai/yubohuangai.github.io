@@ -8,17 +8,6 @@
 % optionally suppress printing the page number
 \pagenumbering{gobble}
 
-% GitLab social macro (mirrors chicv's \github with the fontawesome5 GitLab icon).
-% In use while the GitHub account is suspended; repos are mirrored to GitLab.
-\NewDocumentCommand{\gitlab}{ m o }{
-    \faGitlab\IfNoValueTF{#2}{
-        \underline{\href{#1}{#1}}
-    }{
-        \underline{\href{#2}{#1}}
-    }
-    \hspace{-20pt}
-}
-
 \begin{document}
 
 %% basic personal info
@@ -26,8 +15,8 @@
 
 \begin{basicinfo}
   \info{\email{yubo.huang@hotmail.com}}
-  \info{\homepage{home}[https://huangyubo.gitlab.io/]}
-  \info{\gitlab{huangyubo}[https://gitlab.com/huangyubo]}
+  \info{\homepage{home}[https://yuboshell.github.io/]}
+  \info{\github{yuboshell}[https://github.com/yuboshell]}
   \info{\linkedinsquare{LinkedIn}[https://www.linkedin.com/in/yubo-huang-716530296]}
 %  \info{\phone{+1 (236) 268-7977}}
 
@@ -47,7 +36,7 @@
   [Master of Engineering in Materials Science and Engineering]
   [Beijing, China]
   \begin{itemize}
-    \item Advisors: \href{https://teacher.bupt.edu.cn/hezhaofeng/en/index.htm}{\underline{Prof. Zhaofeng He}}, \href{https://scholar.google.com/citations?user=A0khpKYAAAAJ&hl=en}{\underline{Prof. Peipei Li}}, and \href{https://teacher.bupt.edu.cn/xiangliuyu/en/index.htm}{\underline{Prof. Liuyu Xiang}}.
+    \item Advisors: \href{https://teacher.bupt.edu.cn/hezhaofeng/en/index.htm}{\underline{Prof. Zhaofeng He}}, \href{https://teacher.bupt.edu.cn/lipeipei/en/index.htm}{\underline{Prof. Peipei Li}}, and \href{https://teacher.bupt.edu.cn/xiangliuyu/en/index.htm}{\underline{Prof. Liuyu Xiang}}.
     \item \href{https://drive.google.com/file/d/1Ss19fLouVF3mfJC_bPpnO3EJDIMEDVsh/view?usp=sharing}{\underline{GPA 3.79/4}}
     \item Computer Science Courses: Java Programming, Advanced Operating Systems, Natural Language Processing and Applications, Data Mining Experiment, and AI Computing Systems
   \end{itemize}
@@ -75,7 +64,7 @@
   {Jun 2025 -- Present}
   [Research Intern, advised by Prof. Li Cheng][Edmonton, Alberta, Canada]
   \begin{itemize}
-    \item Built a markerless multi-view smartphone rig and pipeline for \href{https://huangyubo.gitlab.io/motion-capture.html}{\underline{motion capture and 3D reconstruction}}, and reproduced a six-IMU motion capture method.
+    \item Built a markerless multi-view smartphone rig and pipeline for \href{https://yuboshell.github.io/motion-capture}{\underline{motion capture and 3D reconstruction}}, and reproduced a six-IMU motion capture method.
   \end{itemize}
 
 \cventry{\href{https://github.com/DreamSoul-AI}{\underline{DreamSoul}}}
