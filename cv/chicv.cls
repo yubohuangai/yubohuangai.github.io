@@ -31,6 +31,10 @@
 \RequirePackage[hidelinks]{hyperref}
 \RequirePackage{fontawesome5} % icons
 
+% Breakable underline (\uline) so a long hyperlinked title can wrap across lines
+% (the kernel \underline builds an unbreakable box and would overflow the margin).
+\RequirePackage[normalem]{ulem}
+
 % For list environment customizations
 \RequirePackage{enumitem}
 
@@ -38,6 +42,8 @@
 
 % Footer
 %%% Only add "updated" footer to last page
+% Month + year, auto-updated at compile time (e.g. "July 2026").
+\newcommand{\monthyear}{\ifcase\month\or January\or February\or March\or April\or May\or June\or July\or August\or September\or October\or November\or December\fi\ \the\year}
 \pagestyle{fancy}
 \fancypagestyle{default}{
     \fancyhf{}
@@ -46,7 +52,8 @@
 \fancypagestyle{lastpage}{
     \fancyhf{}
     \RenewDocumentCommand{\headrulewidth}{}{0pt}
-    \rfoot{\color{gray}Updated on \today}
+    \RenewDocumentCommand{\footrulewidth}{}{0.4pt}
+    \cfoot{\color{black!60}Updated \monthyear}
 }
 
 % Spacings
