@@ -4,6 +4,10 @@
 
 \linespread{1.2} % Add this line to increase line spacing
 
+% Absorb tiny (<~3pt) overfull lines into slightly wider spacing instead of
+% overflowing the margin — e.g. an unbreakable long hyperlinked repo name.
+\setlength{\emergencystretch}{3pt}
+
 %
 \RequirePackage[
     a4paper,
