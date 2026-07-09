@@ -56,8 +56,7 @@
 \fancypagestyle{lastpage}{
     \fancyhf{}
     \RenewDocumentCommand{\headrulewidth}{}{0pt}
-    \RenewDocumentCommand{\footrulewidth}{}{0.4pt}
-    \cfoot{\color{black!60}Updated \monthyear}
+    \rfoot{\color{black!60}Updated \monthyear}
 }
 
 % Spacings
