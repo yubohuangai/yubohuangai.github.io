@@ -22,10 +22,10 @@ title: Home
   </tr>
   <tr class="proj-row">
     <td class="proj-img" style="padding:1% 2.5%;vertical-align:top">
-      <div class="proj-thumb"><a href="https://yuboshell.github.io/led-sync-panel/report.html" target="_blank" rel="noopener"><img src="./assets/img/led-timecode.jpg" alt="LED Timecode Panel" class="project-image" /></a></div>
+      <div class="proj-thumb"><a href="https://yuboshell.github.io/led-sync-panel/report.html"><img src="./assets/img/led-timecode.jpg" alt="LED Timecode Panel" class="project-image" /></a></div>
     </td>
     <td class="proj-text" style="padding:1% 2.5%;vertical-align:top">
-      <h3><a href="https://yuboshell.github.io/led-sync-panel/report.html" target="_blank" rel="noopener">LED Timecode Panel</a></h3>
+      <h3><a href="https://yuboshell.github.io/led-sync-panel/report.html">LED Timecode Panel</a></h3>
       <p class="project-meta">
       A DIY LED timecode panel that stamps a per-frame binary code into every camera's view, for measuring multi-camera synchronization to sub-millisecond precision (the capture rig behind the Pixel-7 sync-evaluation project).
       </p>
@@ -48,15 +48,15 @@ title: Home
       {% endif %}
     </td>
     <td class="proj-text" style="padding:1% 2.5%;vertical-align:top">
-      <h3>{% if link.pdf %}<a href="{{ link.pdf }}" target="_blank" rel="noopener">{{ link.title }}</a>{% else %}{{ link.title }}{% endif %}</h3>
+      <h3>{% if link.pdf %}<a href="{{ link.pdf }}">{{ link.title }}</a>{% else %}{{ link.title }}{% endif %}</h3>
       <p class="project-meta">
         {{ link.authors }}<br>
         <em>{{ link.conference }}</em>
       </p>
       <p class="linkblock">
-        {% if link.code %} / <a href="{{ link.code }}" target="_blank" rel="noopener">Code</a>{% endif %}
-        {% if link.page %} / <a href="{{ link.page }}" target="_blank" rel="noopener">Project Page</a>{% endif %}
-        {% if link.bibtex %} / <a href="{{ link.bibtex }}" target="_blank" rel="noopener">BibTeX</a>{% endif %}
+        {% if link.code %} / <a href="{{ link.code }}">Code</a>{% endif %}
+        {% if link.page %} / <a href="{{ link.page }}">Project Page</a>{% endif %}
+        {% if link.bibtex %} / <a href="{{ link.bibtex }}">BibTeX</a>{% endif %}
         {% if link.notes %} <strong><i>{{ link.notes }}</i></strong>{% endif %}
       </p>
     </td>
@@ -76,7 +76,7 @@ title: Home
     <p class="project-meta">
     Reading notes on <em>Graph Tokenization for Bridging Graphs and Transformers</em> (Guo et al., ICLR 2026): why graphs never got a tokenizer, and how serializing a graph reversibly and deterministically lets a plain Transformer read it. <em>June 2026.</em>
     </p>
-    <h3><a href="https://huangyubo.gitlab.io/agent-native-lab/" target="_blank" rel="noopener">The Lab Management Workflow Revolution</a></h3>
+    <h3><a href="https://huangyubo.gitlab.io/agent-native-lab/">The Lab Management Workflow Revolution</a></h3>
     <p class="project-meta">
     How a research lab can become agent-native, starting from one agent that already works: the friction in a typical lab workflow, and a first implemented step, a Lab Inventory Agent. <em>June 2026.</em>
     </p>

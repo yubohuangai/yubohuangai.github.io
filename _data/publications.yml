@@ -1,7 +1,7 @@
 main:
 
   - title: "Generative Iris Prior Embedded Transformer for Iris Restoration"
-    authors: '<strong>Yubo Huang</strong>, <a href="https://scholar.google.com/citations?user=Fv9igw0AAAAJ&hl=en" target="_blank" rel="noopener">Jia Wang</a>, <a href="https://teacher.bupt.edu.cn/lipeipei/en/index.htm" target="_blank" rel="noopener">Peipei Li</a>, <a href="https://scholar.google.com/citations?hl=en&user=Ve82AEsAAAAJ" target="_blank" rel="noopener">Liuyu Xiang</a>, Peigang Li, and <a href="https://dblp.org/pid/13/3992-1.html" target="_blank" rel="noopener">Zhaofeng He</a>'  
+    authors: '<strong>Yubo Huang</strong>, <a href="https://scholar.google.com/citations?user=Fv9igw0AAAAJ&hl=en">Jia Wang</a>, <a href="https://teacher.bupt.edu.cn/lipeipei/en/index.htm">Peipei Li</a>, <a href="https://scholar.google.com/citations?hl=en&user=Ve82AEsAAAAJ">Liuyu Xiang</a>, Peigang Li, and <a href="https://dblp.org/pid/13/3992-1.html">Zhaofeng He</a>'  
     conference_short: ICME
     conference: The IEEE Conference on Multimedia and Expo <strong>(ICME)</strong>, 2023.
     pdf: https://arxiv.org/abs/2407.00261

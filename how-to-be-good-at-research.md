@@ -48,6 +48,6 @@ john schulman's guide to ml research splits the work into two modes. in one, you
 
 </div>
 
-<p class="note-source">Source: <a href="https://x.com/itsreallyvivek/status/2064686372737454155" target="_blank" rel="noopener">@itsreallyvivek — <em>How to Be Good at Research</em> (X, June 2026)</a></p>
+<p class="note-source">Source: <a href="https://x.com/itsreallyvivek/status/2064686372737454155">@itsreallyvivek — <em>How to Be Good at Research</em> (X, June 2026)</a></p>
 
 </div>
