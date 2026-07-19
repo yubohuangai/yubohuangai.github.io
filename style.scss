@@ -112,7 +112,7 @@ h1 {
 .header-table tbody { display: block; }
 .header-table tr {
   display: flex;
-  align-items: center;
+  align-items: stretch;
 }
 .header-text {
   flex: 1 1 auto;
@@ -120,17 +120,15 @@ h1 {
   box-sizing: border-box;
 }
 .header-photo {
-  flex: 0 0 37%;
+  flex: 0 0 32%;
   box-sizing: border-box;
-  display: flex;
-  justify-content: flex-end;
 }
-// Canonical square portrait (headshot), center-cropped.
+// Portrait fills its column and stretches to the text-block height (height = text
+// height), center-cropped. The column width ≈ the text height, so it reads ~square.
 .photo-frame {
   position: relative;
   width: 100%;
-  max-width: 210px;
-  aspect-ratio: 1 / 1;
+  height: 100%;
   overflow: hidden;
 }
 .photo-frame img {
@@ -232,6 +230,26 @@ span.highlight {
   transition: transform 0.15s ease;
 }
 details[open] > .fold-summary::after { transform: rotate(90deg); }
+
+// Blog category graph (Blogs section): a clickable SVG mind-map on desktop, and a
+// plain categorized list on phones + for agents/screen-readers (a graph alone is
+// opaque to them).
+.blog-graph .graph-svg { width: 100%; height: auto; display: block; max-width: 720px; margin: 0 auto; }
+.blog-graph svg text { font-family: "Chalkboard SE", "Shantell Sans", "Comic Sans MS", sans-serif; }
+.blog-graph .g-root { font-size: 15px; font-weight: 700; fill: #111; }
+.blog-graph .g-cat  { font-size: 14px; font-weight: 700; }
+.blog-graph .g-post { font-size: 12.5px; fill: #111; }
+.blog-graph a { cursor: pointer; }
+.blog-graph a rect { transition: stroke-width 0.12s ease; }
+.blog-graph a:hover rect { stroke-width: 2.8; }
+.blog-graph a:hover text { fill: #f09228; }
+.blog-graph .graph-list { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
+.blog-graph .glist-cat { font-weight: 700; margin: 0.7rem 0 0.15rem; }
+.blog-graph .graph-list ul { margin: 0 0 0.4rem; padding-left: 1.2rem; }
+@media (max-width: 720px) {
+  .blog-graph .graph-svg { display: none; }
+  .blog-graph .graph-list { position: static; width: auto; height: auto; margin: 0.3rem 0 0; clip: auto; overflow: visible; }
+}
 
 /********************/
 /* RESPONSIVE RULES */
