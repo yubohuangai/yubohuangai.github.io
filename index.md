@@ -64,6 +64,7 @@ title: Home
 <details style="padding:1% 2.5%;">
   <summary class="fold-summary" style="cursor:pointer;"><h2 style="display:inline; margin:0;">Blogs</h2></summary>
   <div style="margin-top:0.7rem;">
+    <h3><a href="/show-dont-tell.html">Show, Don't Tell</a></h3>
     <h3><a href="/share-a-link-not-a-file.html">Share a Link, Not a File</a></h3>
     <h3><a href="/menu-visualized.html">A Menu, Visualized</a></h3>
     <h3><a href="/how-to-be-good-at-research.html">Study Note: How to Be Good at Research</a></h3>
