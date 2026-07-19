@@ -96,7 +96,7 @@ h1 {
 }
 
 // Bio-forward header: left-align name, bio, and links on desktop.
-.header-text h1 { text-align: left; }
+.header-text h1 { text-align: left; margin-block-start: 0; }
 .header-bio {
   font-size: 15.5px;
   line-height: 1.6;
@@ -112,7 +112,7 @@ h1 {
 .header-table tbody { display: block; }
 .header-table tr {
   display: flex;
-  align-items: stretch;
+  align-items: center;
 }
 .header-text {
   flex: 1 1 auto;
@@ -122,11 +122,15 @@ h1 {
 .header-photo {
   flex: 0 0 37%;
   box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
 }
+// Canonical square portrait (headshot), center-cropped.
 .photo-frame {
   position: relative;
   width: 100%;
-  height: 100%;
+  max-width: 210px;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
 }
 .photo-frame img {
@@ -167,23 +171,23 @@ span.highlight {
 .projects .proj-row,
 .pubs .proj-row {
   display: flex;
-  align-items: stretch;
+  align-items: center;
 }
 .projects .proj-img,
 .pubs .proj-img {
-  flex: 0 0 108px;
-  align-self: stretch;
+  flex: 0 0 140px;
 }
 .projects .proj-text,
 .pubs .proj-text {
   flex: 1 1 auto;
   min-width: 0;
 }
+// Canonical square thumbnails (140px), identical across every row.
 .projects .proj-thumb,
 .pubs .proj-thumb {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 140px;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
 }
 .projects .proj-thumb a,
@@ -197,10 +201,8 @@ span.highlight {
   display: block;
   border-radius: 0;
 }
-// Square project thumbnails fill via cover (square sources, no crop).
+// Projects fill the square (crop); Publications show the whole figure, letterboxed.
 .projects .proj-thumb img { object-fit: cover; }
-// Publications: same 108px column as Projects (equal widths). The wide figure is
-// kept whole via contain, so it sits letterboxed (smaller) inside the square box.
 .pubs .proj-thumb img { object-fit: contain; }
 
 .project-meta {
@@ -210,6 +212,26 @@ span.highlight {
 .linkblock {
   margin-top: 6px;
 }
+
+// Foldable section (Blogs): remove the default disclosure triangle (it pushed the
+// heading ~12px right of Projects / Publications) and add a custom caret AFTER the
+// title, so the heading text left-aligns with the other sections. The caret
+// rotates from ▸ to ▾ when the section is open.
+.fold-summary {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.fold-summary::-webkit-details-marker { display: none; }
+.fold-summary::after {
+  content: "\25B8";
+  margin-left: 0.4em;
+  font-size: 15px;
+  line-height: 1;
+  color: #1772d0;
+  transition: transform 0.15s ease;
+}
+details[open] > .fold-summary::after { transform: rotate(90deg); }
 
 /********************/
 /* RESPONSIVE RULES */
@@ -280,17 +302,22 @@ span.highlight {
   .header-photo { flex: 0 0 auto; }
 
   .photo-frame {
-    position: static;
+    position: relative;
+    width: 190px;
+    max-width: 60%;
+    aspect-ratio: 1 / 1;
     height: auto;
-    overflow: visible;
+    overflow: hidden;
+    margin: 0 auto 8px;
   }
 
   .header-photo img {
-    position: static;
-    width: 190px !important;
-    max-width: 60% !important;
-    height: auto;
-    margin: 0 auto 8px;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
     display: block;
   }
 
@@ -301,6 +328,7 @@ span.highlight {
 
   td {
     padding: 2.5% 4% !important;
+    box-sizing: border-box;
   }
 
   // Any image (project teasers, figures) fits the column width.
@@ -323,25 +351,25 @@ span.highlight {
     text-align: center;
   }
 
-  .proj-row .proj-img img {
-    max-width: 260px;
-    margin: 0 auto;
-  }
-
-  // Undo the desktop frame so the stacked mobile thumbnail is natural.
+  // Square thumbnail, centered above the text on mobile.
   .projects .proj-thumb,
   .pubs .proj-thumb {
-    position: static;
+    position: relative;
+    width: 200px;
+    max-width: 70%;
+    aspect-ratio: 1 / 1;
     height: auto;
-    overflow: visible;
+    overflow: hidden;
+    margin: 0 auto;
   }
   .projects .proj-thumb a,
-  .pubs .proj-thumb a { position: static; }
+  .pubs .proj-thumb a { position: absolute; inset: 0; }
   .projects .proj-thumb img,
   .pubs .proj-thumb img {
-    position: static;
-    width: auto;
-    height: auto;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
   }
 
   .proj-row .proj-text {
@@ -373,9 +401,9 @@ span.highlight {
     font-size: 15px;
   }
 
-  .header-photo img {
-    width: 150px !important;
-    max-width: 55% !important;
+  .photo-frame {
+    width: 150px;
+    max-width: 55%;
   }
 
   td {
