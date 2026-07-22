@@ -23,7 +23,7 @@ As a technology nerd, I love trading ideas with curious people and sharing the e
 **Two open directions for collaborators:**
 
 1. **Breaking the 11-device cap.** The rig tops out at eleven phones because an Android hotspot accepts only ten clients around a single host. An external access point — a Raspberry Pi acting as a router — might lift that ceiling and let the rig grow. Inspired by [this build](https://www.youtube.com/watch?v=jlHWnKVpygw&t=414s).
-2. **New synchronization algorithms.** [Argus](https://github.com/yuboshell/Argus), the rig's capture app, builds on Google's [libsoftwaresync](https://github.com/google-research/libsoftwaresync) from 2019. Six years on, with agentic coding reshaping how software gets written, it is worth exploring new algorithms that push the sub-17 ms offset lower.
+2. **New synchronization algorithms.** [Argus](https://github.com/yubohuangai/Argus), the rig's capture app, builds on Google's [libsoftwaresync](https://github.com/google-research/libsoftwaresync) from 2019. Six years on, with agentic coding reshaping how software gets written, it is worth exploring new algorithms that push the sub-17 ms offset lower.
 
 Reach me at <a class="email-link" href="mailto:yubo16@ualberta.ca">yubo16@ualberta.ca</a>.
 
@@ -62,6 +62,6 @@ How can high-fidelity motion capture leave the studio? The answer here is a full
 
 ### Resources
 
-A two-page visual summary, with the full pipeline and references, is available as a [PDF work summary](/assets/files/Motion_Capture_and_3D_Reconstruction_Work_Summary.pdf). The code lives in [Motion-Capture](https://github.com/yuboshell/Motion-Capture), covering calibration, reconstruction, and pose, with a companion app, Argus, handling synchronization.
+A two-page visual summary, with the full pipeline and references, is available as a [PDF work summary](/assets/files/Motion_Capture_and_3D_Reconstruction_Work_Summary.pdf). The code lives in [Motion-Capture](https://github.com/yubohuangai/Motion-Capture), covering calibration, reconstruction, and pose, with a companion app, Argus, handling synchronization.
 
 </div>

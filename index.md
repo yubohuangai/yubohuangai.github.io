@@ -19,10 +19,10 @@ title: Home
   </tr>
   <tr class="proj-row">
     <td class="proj-img" style="padding:1% 2.5%;vertical-align:top">
-      <div class="proj-thumb"><a href="https://yuboshell.github.io/led-sync-panel/report.html"><img src="./assets/img/led-timecode.jpg" alt="LED Timecode Panel" class="project-image" /></a></div>
+      <div class="proj-thumb"><a href="https://yubohuangai.github.io/led-sync-panel/report.html"><img src="./assets/img/led-timecode.jpg" alt="LED Timecode Panel" class="project-image" /></a></div>
     </td>
     <td class="proj-text" style="padding:1% 2.5%;vertical-align:top">
-      <h3><a href="https://yuboshell.github.io/led-sync-panel/report.html">LED Timecode Panel</a></h3>
+      <h3><a href="https://yubohuangai.github.io/led-sync-panel/report.html">LED Timecode Panel</a></h3>
       <p class="project-meta">
       Measuring multi-camera synchronization to sub-millisecond precision.
       </p>
@@ -85,7 +85,7 @@ title: Home
       <text x="285" y="327" text-anchor="middle" class="g-cat" style="fill:#b5761a">Study Notes</text>
       <a href="/share-a-link-not-a-file.html"><rect x="465" y="32" width="210" height="32" rx="8" fill="#f5f9fe" stroke="#1772d0" stroke-width="1.5"/><text x="570" y="52" text-anchor="middle" class="g-post">Share a Link, Not a File</text></a>
       <a href="/show-dont-tell.html"><rect x="465" y="92" width="210" height="32" rx="8" fill="#f5f9fe" stroke="#1772d0" stroke-width="1.5"/><text x="570" y="112" text-anchor="middle" class="g-post">Show, Don't Tell</text></a>
-      <a href="https://yuboshell.github.io/agent-native-lab/"><rect x="465" y="154" width="210" height="32" rx="8" fill="#f2fbf5" stroke="#2f9e44" stroke-width="1.5"/><text x="570" y="174" text-anchor="middle" class="g-post">Lab Management Workflow</text></a>
+      <a href="https://yubohuangai.github.io/agent-native-lab/"><rect x="465" y="154" width="210" height="32" rx="8" fill="#f2fbf5" stroke="#2f9e44" stroke-width="1.5"/><text x="570" y="174" text-anchor="middle" class="g-post">Lab Management Workflow</text></a>
       <a href="/menu-visualized.html"><rect x="465" y="214" width="210" height="32" rx="8" fill="#f2fbf5" stroke="#2f9e44" stroke-width="1.5"/><text x="570" y="234" text-anchor="middle" class="g-post">A Menu, Visualized</text></a>
       <a href="/how-to-be-good-at-research.html"><rect x="465" y="276" width="210" height="32" rx="8" fill="#fdf7ec" stroke="#d98a1f" stroke-width="1.5"/><text x="570" y="296" text-anchor="middle" class="g-post">How to Be Good at Research</text></a>
       <a href="/graph-tokenization.html"><rect x="465" y="336" width="210" height="32" rx="8" fill="#fdf7ec" stroke="#d98a1f" stroke-width="1.5"/><text x="570" y="356" text-anchor="middle" class="g-post">Graph Tokenization</text></a>
@@ -94,7 +94,7 @@ title: Home
       <p class="glist-cat" style="color:#1772d0">Communication</p>
       <ul><li><a href="/share-a-link-not-a-file.html">Share a Link, Not a File</a></li><li><a href="/show-dont-tell.html">Show, Don't Tell</a></li></ul>
       <p class="glist-cat" style="color:#268a3c">Fun with Agents</p>
-      <ul><li><a href="https://yuboshell.github.io/agent-native-lab/">The Lab Management Workflow Revolution</a></li><li><a href="/menu-visualized.html">A Menu, Visualized</a></li></ul>
+      <ul><li><a href="https://yubohuangai.github.io/agent-native-lab/">The Lab Management Workflow Revolution</a></li><li><a href="/menu-visualized.html">A Menu, Visualized</a></li></ul>
       <p class="glist-cat" style="color:#b5761a">Study Notes</p>
       <ul><li><a href="/how-to-be-good-at-research.html">How to Be Good at Research</a></li><li><a href="/graph-tokenization.html">Graph Tokenization</a></li></ul>
     </div>

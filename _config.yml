@@ -17,12 +17,12 @@ email: yubo.huang@hotmail.com
 keywords: Yubo Huang
 description: Yubo Huang
 # Site URL (used for sitemap; with no explicit `canonical`, each page self-canonicalizes from this).
-url: "https://yuboshell.github.io"
+url: "https://yubohuangai.github.io"
 
 # Links
 # If you don't need one of them, you may delete the corresponding line.
 cv_link: assets/files/resume.pdf
-github_link: https://github.com/yuboshell
+github_link: https://github.com/yubohuangai
 linkedin: https://www.linkedin.com/in/yubo-huang-716530296
 google_scholar: https://scholar.google.ca/citations?user=qYREfhAAAAAJ&hl=en&authuser=2
 instagram: https://www.instagram.com/huangyuboins
