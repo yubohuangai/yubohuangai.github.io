@@ -64,7 +64,7 @@ title: Home
 <details open style="padding:1% 2.5%;">
   <summary class="fold-summary" style="cursor:pointer;"><h2 style="display:inline; margin:0;">Blogs</h2></summary>
   <div style="margin-top:0.7rem;" class="blog-graph">
-    <svg class="graph-svg" viewBox="0 0 780 400" role="img" aria-label="Blog posts grouped into three categories: Communication, Fun with Agents, and Study Notes.">
+    <svg class="graph-svg" viewBox="0 0 780 460" role="img" aria-label="Blog posts grouped into three categories: Communication, Fun with Agents, and Study Notes.">
       <desc>Communication: Share a Link, Not a File; Show, Don't Tell. Fun with Agents: The Lab Management Workflow Revolution; A Menu, Visualized. Study Notes: How to Be Good at Research; Graph Tokenization.</desc>
       <path d="M107,200 C165,200 165,78 221,78"   fill="none" stroke="#1772d0" stroke-width="1.8"/>
       <path d="M107,200 C165,200 165,200 221,200" fill="none" stroke="#2f9e44" stroke-width="1.8"/>
@@ -75,6 +75,7 @@ title: Home
       <path d="M349,200 C407,200 407,230 465,230" fill="none" stroke="#2f9e44" stroke-width="1.6"/>
       <path d="M349,322 C407,322 407,292 465,292" fill="none" stroke="#d98a1f" stroke-width="1.6"/>
       <path d="M349,322 C407,322 407,352 465,352" fill="none" stroke="#d98a1f" stroke-width="1.6"/>
+      <path d="M349,322 C407,322 407,412 465,412" fill="none" stroke="#d98a1f" stroke-width="1.6"/>
       <rect x="23" y="181" width="84" height="38" rx="10" fill="#f0f0f0" stroke="#555" stroke-width="1.8"/>
       <text x="65" y="205" text-anchor="middle" class="g-root">Blogs</text>
       <rect x="221" y="60" width="128" height="36" rx="9" fill="#eaf2fd" stroke="#1772d0" stroke-width="1.8"/>
@@ -89,6 +90,7 @@ title: Home
       <a href="/menu-visualized.html"><rect x="465" y="214" width="210" height="32" rx="8" fill="#f2fbf5" stroke="#2f9e44" stroke-width="1.5"/><text x="570" y="234" text-anchor="middle" class="g-post">A Menu, Visualized</text></a>
       <a href="/how-to-be-good-at-research.html"><rect x="465" y="276" width="210" height="32" rx="8" fill="#fdf7ec" stroke="#d98a1f" stroke-width="1.5"/><text x="570" y="296" text-anchor="middle" class="g-post">How to Be Good at Research</text></a>
       <a href="/graph-tokenization.html"><rect x="465" y="336" width="210" height="32" rx="8" fill="#fdf7ec" stroke="#d98a1f" stroke-width="1.5"/><text x="570" y="356" text-anchor="middle" class="g-post">Graph Tokenization</text></a>
+      <a href="/sc2-stack-diagram.html"><rect x="465" y="396" width="210" height="32" rx="8" fill="#fdf7ec" stroke="#d98a1f" stroke-width="1.5"/><text x="570" y="416" text-anchor="middle" class="g-post">The SC2 Command Stack</text></a>
     </svg>
     <div class="graph-list">
       <p class="glist-cat" style="color:#1772d0">Communication</p>
@@ -96,7 +98,7 @@ title: Home
       <p class="glist-cat" style="color:#268a3c">Fun with Agents</p>
       <ul><li><a href="https://yubohuangai.github.io/agent-native-lab/">The Lab Management Workflow Revolution</a></li><li><a href="/menu-visualized.html">A Menu, Visualized</a></li></ul>
       <p class="glist-cat" style="color:#b5761a">Study Notes</p>
-      <ul><li><a href="/how-to-be-good-at-research.html">How to Be Good at Research</a></li><li><a href="/graph-tokenization.html">Graph Tokenization</a></li></ul>
+      <ul><li><a href="/how-to-be-good-at-research.html">How to Be Good at Research</a></li><li><a href="/graph-tokenization.html">Graph Tokenization</a></li><li><a href="/sc2-stack-diagram.html">The StarCraft II Command Stack</a></li></ul>
     </div>
   </div>
 </details>
